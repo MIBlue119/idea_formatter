@@ -1,5 +1,4 @@
 import openai
-from loguru import logger
 import streamlit as st
 
 from idea_formatter.utils import DESIRED_FORMATS, LANGUAGES
@@ -50,10 +49,7 @@ def main():
         for i, option in enumerate(options):
             message.write(f"Generating {option}...")
             desired_format = [option]
-            logger.info(f"Generating {option}...")
             formatted_result = formatter.format(idea=idea, desired_formats=desired_format, lang=lang_select)
-            logger.info(f"Formatted {option} successfully.")
-            logger.info(formatted_result)
             # Render a new markdown block for each formatted text
             st.title(f"{option}")
             st.code(formatted_result, language="text")
