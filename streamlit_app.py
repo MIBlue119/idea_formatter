@@ -26,9 +26,7 @@ def main():
     languages_options = sorted(LANGUAGES.values())
     lang_select = col3.selectbox("Language",options=languages_options,index=languages_options.index(default_lang_option), help='Select the target language for the formatted text.')
     
-    options = col4.multiselect(
-    'What formats do you want to generate?',DESIRED_FORMATS, max_selections=5)
-    st.write('You selected:', options)
+    options = col4.multiselect('What formats do you want to generate?',DESIRED_FORMATS, max_selections=5)
     idea = st.text_area('What is your idea?')
     make_button=st.button("Make Idea Formatted")
 
