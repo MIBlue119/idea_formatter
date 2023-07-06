@@ -1,0 +1,5 @@
+openai
+streamlit==1.7.0
+tiktoken
+retry
+ratelimit
