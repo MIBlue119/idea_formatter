@@ -2,6 +2,8 @@
 
 A simple POC to use GPT to format your idea to desired context text formats
 
+demo_site: https://ideaformatter-qqja2xy39x.streamlit.app/
+
 Current support format
 ```
 DESIRED_FORMATS=[
